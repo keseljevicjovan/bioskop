@@ -65,8 +65,9 @@ function displayResults(results) {
 function openMediaPage(result) {
     const mediaType = result.media_type === 'movie' ? 'movie' : 'tv';
     const mediaId = result.id;
+    const title = encodeURIComponent(result.title || result.name);
 
-    const url = `${mediaType}/${mediaId}`;
+    const url = `media.html?tmdb=${mediaId}&title=${title}&type=${mediaType}`;
     window.location.href = url;
 }
 

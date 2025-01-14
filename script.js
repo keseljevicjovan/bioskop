@@ -1,5 +1,5 @@
 const BASE_URL = 'https://api.themoviedb.org/3';
-const API_URL = 'http://api.movies.cortexakademija.com/tmdb-token';
+const API_URL = 'https://api.movies.cortexakademija.com/tmdb-token';
 let API_KEY = '';
 
 const searchInput = document.getElementById('searchInput');
@@ -66,7 +66,7 @@ function openMediaPage(result) {
     const mediaType = result.media_type === 'movie' ? 'movie' : 'tv';
     const mediaId = result.id;
 
-    const url = `http://localhost:3000/${mediaType}/${mediaId}`;
+    const url = `${mediaType}/${mediaId}`;
     window.location.href = url;
 }
 
